@@ -1,29 +1,24 @@
 class Student{
     name;
-    class;
-    dob;
+    classNumber;
+    age;
     address;
-    gender;
-    constructor(name,age,dob,address,gender){
+    constructor(name,classNumber,age,address,){
         this.name = name
+        this.class = classNumber
         this.age = age
-        this.dob = dob
         this.address = address
-        this.gender = gender
     }
     showInfo(){
-        console.log(`Ten: ${ this.name}
-Tuoi: ${this.age}
-Ngay sinh: ${this.dob}
-Dia chi: ${this.address}
-Gioi tinh: ${this.gender}
-`)}
+        console.log(`Ten: ${this.name}
+    Lop: ${this.classNumber}
+    Tuoi: ${this.age}
+    Dia Chi: ${this.address}`)
     }
+}
 
 class ClassName{
-    studentName;
-    constructor(studentName){
-        this.studentName = studentName
+    constructor(){
         this.liststudent = []
     }
     showStudent(student, name, age, address){
@@ -40,15 +35,15 @@ class ClassName{
         this.liststudent.push(student)
     }
     showAge(age){
-        this.liststudent.filter(student=>{return student.age===age})
-        this.showStudent(age)
+      return  this.liststudent.filter(student=>{return student.age===age})
+        // this.showStudent(age)
     }
     showAddressAndAge(address, age){
-        this.liststudent.filter(student=>{return student.address===address}) && this.liststudent(student=>{return student.age===age})
+      return this.liststudent.filter(student=>{return student.address===address && student.age===age})
     }
     showName(name){
-        this.liststudent.filter(student=>{return student.name===name})
-        this.showStudent(name)
+       return this.liststudent.filter(student=>{return student.name===name})
+        // this.showStudent(name)
     }
  
 }
