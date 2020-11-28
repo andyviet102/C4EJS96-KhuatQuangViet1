@@ -3,7 +3,7 @@ class Student{
     classNumber;
     age;
     address;
-    constructor(name,classNumber,age,address,){
+    constructor(name,classNumber,age,address){
         this.name = name
         this.classNumber = classNumber
         this.age = age

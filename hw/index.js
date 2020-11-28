@@ -21,3 +21,5 @@ class518.showAddressAndAge(18,'Ha Noi')
 class518.showAddressAndAge(19,'Son Tay')
 class518.showAge(15)
 class518.showName('Ha chi Nhan')
+
+console.log(class518.showAddressAndAge(18,'Ha Noi'))
