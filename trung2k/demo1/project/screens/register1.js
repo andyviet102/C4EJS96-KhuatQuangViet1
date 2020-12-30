@@ -221,7 +221,7 @@ class RegisterSceen extends HTMLElement{
             </form>
          </div>
               
-                  <button class="btn-register" id="btn-register">Register</button></br>
+                  <button class="btn-register" id="btnRegister"type="submit">Register</button></br>
                   <a id="redirect1" >Already have an account ? Login</a></br>
       </form>
   </div>
@@ -236,8 +236,8 @@ class RegisterSceen extends HTMLElement{
     e.preventDefault();
     modal.style.display = "none";
     });
-    const registerForm = this._shadowRoot.getElementById('register-form')
-    registerForm.addEventListener('submit', async(e) => { 
+    const btnRegister = this._shadowRoot.getElementById('btnRegister')
+    btnRegister.addEventListener('click', async(e) => { 
       e.preventDefault()
       const name = this._shadowRoot.getElementById('name').value
       const email = this._shadowRoot.getElementById('email').value
@@ -272,7 +272,7 @@ class RegisterSceen extends HTMLElement{
         isValid = false
         this.setError('confirm-password', "Password didn't match")
       }
-      if (!isValid) {
+      if (isValid== false) {
         return
       }
       const user = {
