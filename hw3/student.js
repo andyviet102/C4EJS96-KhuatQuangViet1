@@ -10,11 +10,10 @@ export class Student{
       this.address = address
     }
     getInfo() {
-      console.log(`Name: ${this.fullName}
+      return `Name: ${this.fullName}
                   Age: ${this.age}
                   Address: ${this.address}
                   Class: ${this.className}
-      `)
+      `
     }
   }
-  

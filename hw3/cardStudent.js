@@ -38,4 +38,6 @@ class CardStudent extends HTMLElement{
         `
     }
 } 
-window.customElements.define("card-container", CardStudent)
+window.customElements.define("card-container", CardStudent );
+// định bảo j em đang bảo là may cai import cac thu day ko phai la link cn voi nhau a hay cach de nhat bay gio la cu truyen thang du lieu vao html cho no hien ra thoi
+//  định truyền từ studentColeection vào student á vang muon lam guong cai module y a 

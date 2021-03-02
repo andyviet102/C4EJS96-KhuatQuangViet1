@@ -15,53 +15,44 @@ h1{
   width: 250px;
   margin-left: 40%;
   top:0;
+
 }
 .tag{
   margin: 1% 10% 0.5% 20%;
   font-weight: bold;
 }
-.input-register{
+input{
   margin: 0 10% 0% 20%;
   width: 450px;
   height: 45px;
   border-radius: 10px;
   border: 2px solid gray ;
 }
-.input-img{
-  width: 250px;
-  margin: 3%;
-  margin: 0 10% 0% 20%;
-  width: 450px;
-  height: 45px;
-  border-radius: 10px;
-  border: 2px solid gray;
-}
 .sex-tag {
   position:absolute;
-  top:60%;
-  left: -19%;
+  top:20%;
+  left: -22%;
   margin: 0 10% 0% 80% ;
   width: 100px;
   height: 100px;
 }
 .tag-birth{
   position:absolute;
-  top:13%;
+  top:50%;
   left: -23%;
   margin: 0 10% 0% 80% ;
 }
 button{
   cursor: pointer;
 }
+.gender{
 
+
+   
+}
 .birth{
- width: 250px;
+  width: 250px;
  margin: 3%;
- margin: 0 10% 0% 20%;
- width: 250px;
- height: 45px;
- border-radius: 10px;
- border: 2px solid gray;
 }
 .test{
 display: flex;
@@ -74,53 +65,57 @@ display: flex;
   border: 2px solid gray ;
 }
 
-.btn-register, a{
+.btn-luu{
   width: 200px;
   height: 40px;
   border-radius: 25px;
-  
+  border: 2px solid rosybrown;
   margin-left: 40%;
   margin-top: 3%;
 }
 
-h4, .title-logo{
-  text-align: center;
-  font-weight: bold;
-};
+body {font-family: Arial, Helvetica, sans-serif;}
 
-.btn-continue{
-  margin-left: 35%;
+*{
+    margin: 0;
+    padding: 0;
 }
+h3{
+text-align: center;}
 
 button:hover {
     border-color:rgb(0 135 180);
 }
-
+.img-logo{
+  padding-left: 37%;
+  width: 100px;
+  height: 100px;
+}
+.title-logo{
+  text-align: center;
+  font-weight: bold;
+}
 .modal {
-  background: aquamarine;
   display: none;
-  position: fixed;
+  position: fixed; 
   z-index: 1;
-  left: 35%;
+  left: 0;
   top: 0;
-  width: 300px;
-  overflow: auto;
-  padding-top: 60px;
-  border-radius: 20px;
-  padding: 1rem 0px;
-  display: block;
-  height: 350px;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  padding-top: 60px; 
 }
 
 .modal-content {
-  background-color: red;
+  background-color: #fefefe;
   margin: 5% auto 15% auto; 
   border: px solid #888;
   width: 392px;
   height: 580px;
   border-radius: 15px;
 }
-.container-sothich{
+.container{
   text-align: left;
  padding: 10px 20px 10px 20px;
  margin: 20px 20px 20px 20px;
@@ -136,7 +131,9 @@ button:hover {
   margin-bottom: 15px;
 }
 
-animate {
+
+
+.animate {
   -webkit-animation: animatezoom 0.6s;
   animation: animatezoom 0.6s
 }
@@ -150,8 +147,10 @@ animate {
   from {transform: scale(0)} 
   to {transform: scale(1)}
 }
- 
- @media only screen and (max-width: 768px){
+    
+
+
+  @media only screen and (max-width: 768px){
     #register-form{
       width: 100%;
     }
@@ -177,25 +176,24 @@ class RegisterSceen extends HTMLElement{
       <h1 style="font-size: 35px;font-family: 'JetBrains Mono', monospace;"><i class="fa fa-venus-mars" aria-hidden="true"></i>tinher</h1>
           <div class="title-register">LẬP TÀI KHOẢN</div>
           <p class="tag"> Tên riêng</p>
-              <input class="input-register" id="name" type="text"  placeholder="   Tên riêng">
+              <input id="name" type="text"  placeholder="   Tên riêng">
           <p class="tag"> Địa chỉ Email</p>
-              <input class="input-register" id="email" type="text"  placeholder="  Tinher@gmail.com">
+              <input id="email" type="text"  placeholder="  Tinher@gmail.com">
           <p class="tag">Password</p>
-              <input class="input-register" id="password" type="password" placeholder="  Password">
+              <input id="password" type="password" placeholder="  Password">
           <p class="tag">ConfirmPassword</p>
-              <input class="input-register" id="confirm-password" type="password" placeholder="  Confirm password">
+              <input id="confirm-password" type="password" placeholder="  Confirm password">
               <div class="tag-birth">
                    <p class="tag">Sinh Nhật</p>
-                      <input class="birth" id="birth" type="date"  placeholder="    NN/TT/NNNN"  max="2003-01-01" >
+                      <input class="birth" id="birth" type="date"  placeholder="  NN/TT/NNNN"  max="2003-01-01" >
               </div>
                <div class="sex-tag">
                    <p class="tag"> Giới tính</p>
-                   <input id="gender" type="radio" value="Name" name="gender"/><span> Nam</span> <br/>
-                   <input id="gender" type="radio" value="Nữ" name="gender"/><span> Nữ </span><br/>
+                   
               </div>
               <div class="tag-img">    
                   <p class="tag"> Ảnh hồ sơ</p>
-                      <input class="input-img" id='avatar'type="file" id="img-info" width="48"height="48">
+                      <input id='avatar'type="file" id="img-info" width="48"height="48">
               </div>
               <div class="tag-btn-sothich">
               <div class="tag"> Đam mê</div>
@@ -204,25 +202,25 @@ class RegisterSceen extends HTMLElement{
         <div id="modal" class="modal" style="padding: 1rem 0; display:none;">
           <form class="modal-content animate" id="continue" >
             <div class="title-logo">Đam mê</div>
-              <h4> Hãy cho mọi người biết đam mê của bạn bằng cách chọn chúng vào hồ sơ</h4>
-                <div class="container-sothich"style="margin-left: 20%;">     
-            <input id="sothich" class="btn-sothich-modal1" type="radio" value="thethao" /> <span>Thể thao</span> <br/>
-            <input id="sothich" class="btn-sothich-modal1" type="radio" value="nghenhac"/> <span>Nghe nhạc</span> <br/>
-            <input id="sothich" class="btn-sothich-modal1" type="radio" value="xemphim"/> <span>Xem phim</span> <br/>
-            <input id="sothich" class="btn-sothich-modal1" type="radio" value="dulich"/> <span>Du lịch</span> <br/>
-            <input id="sothich" class="btn-sothich-modal1" type="radio" value="thoitrang"/> <span>Thời trang</span> <br/>
-            <input id="sothich" class="btn-sothich-modal1" type="radio" value="boiloi"/> <span>Bơi lội</span> <br/>
-            <input id="sothich" class="btn-sothich-modal1" type="radio" value="buncha"/> <span>Bún chả</span> <br/>
-            <input id="sothich" class="btn-sothich-modal1" type="radio" value="trada"/> <span>Trà đá</span> <br/>
-            <input id="sothich" class="btn-sothich-modal1" type="radio" value="Mol"/> <span>Mol</span><br/>
-          
+              <p> Hãy cho mọi người biết đam mê của bạn bằng cách chọn chúng vào hồ sơ</p>
+                <div class="container">     
+            <input id="sothich" class="btn-sothich-modal1" type="radio" value="thethao" /> Thể thao <br/>
+            <input id="sothich" class="btn-sothich-modal1" type="radio" value="nghenhac"  /> Nghe nhạc <br/>
+            <input id="sothich" class="btn-sothich-modal1" type="radio" value="xemphim"  /> Xem phim <br/>
+            <input id="sothich" class="btn-sothich-modal1" type="radio" value="dulich"  /> Du lịch <br/>
+            <input id="sothich" class="btn-sothich-modal1" type="radio" value="thoitrang"  /> Thời trang <br/>
+            <input id="sothich" class="btn-sothich-modal1" type="radio" value="boiloi" /> Bơi lội <br/>
+            <input id="sothich" class="btn-sothich-modal1" type="radio" value="buncha"  /> Bún chả <br/>
+            <input id="sothich" class="btn-sothich-modal1" type="radio" value="trada"  /> Trà đá <br/>
+            <input id="sothich" class="btn-sothich-modal1" type="radio" value="Mol"  /> Mol<br/>
+            
                 </div> 
                 <button class="btn-continue"id="btn-continue" type="submit">Continue</button>
             </form>
          </div>
               
-                  <button class="btn-register" id="btnRegister"type="submit">Register</button></br>
-                  <a id="redirect1" >Already have an account ? Login</a></br>
+                  <button class="btn-register" id="btn-register">Register</button>
+                      <a id="redirect1">Already have an account ? Login</a>
       </form>
   </div>
     `
@@ -236,8 +234,8 @@ class RegisterSceen extends HTMLElement{
     e.preventDefault();
     modal.style.display = "none";
     });
-    const btnRegister = this._shadowRoot.getElementById('btnRegister')
-    btnRegister.addEventListener('click', async(e) => { 
+    const registerForm = this._shadowRoot.getElementById('register-form')
+    registerForm.addEventListener('submit', async(e) => { 
       e.preventDefault()
       const name = this._shadowRoot.getElementById('name').value
       const email = this._shadowRoot.getElementById('email').value
@@ -250,10 +248,12 @@ class RegisterSceen extends HTMLElement{
       const btnSothich = this._shadowRoot.getElementById('btn-sothich').value
       const btnContinue = this._shadowRoot.getElementById('btn-continue').value
       const redirect1 = this._shadowRoot.getElementById('redirect1').value
+      const register = this._shadowRoot.getElementById('btn-register').value
+     
       let isValid = true
       if (name.trim() === '') {
         isValid = false
-        this.setError('name', 'Please input name')
+        this.setError('name', 'Please input first name')
       } else {
       }
       if (email.trim() === '') {
@@ -272,20 +272,22 @@ class RegisterSceen extends HTMLElement{
         isValid = false
         this.setError('confirm-password', "Password didn't match")
       }
-      if (isValid== false) {
+      if (!isValid) {
         return
       }
+     
+     
       const user = {
         Name: name,
         email: email,
         birth: birth,
-        gender: gender,
-        image: image,
-        sothich: sothich,
+        // gender: gender,
+        // image: image,
+        // sothich: sothich,
         password: CryptoJS.MD5(password).toString()
       }
-      console.log(user);
-            // const res = await firebase.firestore().collection('posts').add(newPost);
+      console.log(user)
+      // const res = await firebase.firestore().collection('posts').add(newPost);
                 
       // const img = postForm.file.files
       // if(img.length > 0){
@@ -315,11 +317,12 @@ class RegisterSceen extends HTMLElement{
         redirect('login')
       }
     })
-
+  
     this._shadowRoot.getElementById('redirect1')
     .addEventListener('click', () => {
       redirect('register')
     })
+
   }
   setError(id, message) {
     this._shadowRoot.getElementById(id)
@@ -330,5 +333,7 @@ class RegisterSceen extends HTMLElement{
     .where('email', '==' , email).get()
     return !res.empty
   }
+
 }
+
 window.customElements.define('register1-screen', RegisterSceen)
